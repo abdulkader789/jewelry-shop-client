@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: [
     { name: "Abdul Kader", url: "https://github.com/abdulkader789" },
     { name: "Md Mahi Kaishar", url: "mahikaishar@gmail.com" },
-    { name: "", url: "" },
+    { name: "Toufiq Gilani Rabbu", url: "https://github.com/GilaniRabbu" },
   ]
 };
 
