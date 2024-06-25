@@ -9,3 +9,10 @@ export interface IUser {
     name: string,
     img: string,
 }
+
+// types.ts
+export interface INavLink {
+    name: string;
+    slug: string;
+    dropdown?: INavLink[];
+}
