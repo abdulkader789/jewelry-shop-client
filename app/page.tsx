@@ -1,7 +1,6 @@
-import CategoryCard from "./components/categoryCard/CategoryCard";
-import ProductCard from "./components/productCard/ProductCard";
+import { CategoryCard, ProductCard } from "@/components/common";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <main className="">
       <CategoryCard/>

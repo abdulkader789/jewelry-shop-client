@@ -1,11 +1,9 @@
 import React from 'react';
 
-const page = () => {
+export default function ProductsPage() {
     return (
         <div>
-            Cart
+            Shop Page
         </div>
     );
 };
-
-export default page;

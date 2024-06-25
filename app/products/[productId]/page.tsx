@@ -1,11 +1,9 @@
 import React from 'react';
 
-const page = () => {
+export default function ProductByProductIdPage() {
     return (
         <div>
             Product details Page
         </div>
     );
 };
-
-export default page;
