@@ -5,7 +5,7 @@ export async function getProducts(): Promise<IProduct[]> {
         {
             id: "001",
             name: "Product One",
-            img: "/next.svg",
+            img: "https://images.pond5.com/engagement-diamond-ring-white-background-footage-086465810_prevstill.jpeg",
             des: "Product one des",
         },
         {
@@ -20,5 +20,5 @@ export async function getProducts(): Promise<IProduct[]> {
             img: "/next.svg",
             des: "Product one des",
         }
-    ]
+    ];
 }
