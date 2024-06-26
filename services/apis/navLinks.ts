@@ -1,7 +1,7 @@
 // navLinks.ts
 import { INavLink } from '@/types';
 
-export async function getProducts(): Promise<INavLink[]> {
+export async function getNavLinks(): Promise<INavLink[]> {
   return [
     { name: "Home", slug: "/" },
     { name: "Shop", slug: "/shop" },

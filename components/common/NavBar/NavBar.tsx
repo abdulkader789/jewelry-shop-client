@@ -1,14 +1,19 @@
 // components/NavBar.tsx
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { INavLink } from '@/types';
-import { getNavLinks } from '@/services/api/navLinks';
+import apis from '@/services/apis';
+
 const NavBar: React.FC = () => {
   const [navLinks, setNavLinks] = useState<INavLink[]>([]);
 
     const [showLinks, setShowLinks] = useState(false);
-
+    useEffect(() => {
+      apis.navLinks.getNavLinks()
+          .then(data => setNavLinks(data));
+  });
+console.log('nav data', navLinks)
     const [dropdownOpenIndex, setDropdownOpenIndex] = useState<number | null>(null);
     const toggleLinks = () => {
         setShowLinks(!showLinks);
