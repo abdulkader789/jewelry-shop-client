@@ -2,8 +2,8 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link';
-import { getNavLinks } from '@/services/api/navlinks';
 import { INavLink } from '@/types';
+import { getNavLinks } from '@/services/api/navLinks';
 const NavBar: React.FC = () => {
     const [showLinks, setShowLinks] = useState(false);
 
