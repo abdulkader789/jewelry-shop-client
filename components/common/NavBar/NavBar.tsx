@@ -2,13 +2,13 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link';
-import { getNavLinks } from '@/services/api/navlinks';
 import { INavLink } from '@/types';
 const NavBar: React.FC = () => {
+  const [navLinks, setNavLinks] = useState<INavLink[]>([]);
+
     const [showLinks, setShowLinks] = useState(false);
 
     const [dropdownOpenIndex, setDropdownOpenIndex] = useState<number | null>(null);
-    const navLinks = getNavLinks();
     const toggleLinks = () => {
         setShowLinks(!showLinks);
       };
