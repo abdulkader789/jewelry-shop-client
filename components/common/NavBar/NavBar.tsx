@@ -5,10 +5,11 @@ import Link from 'next/link';
 import { INavLink } from '@/types';
 import { getNavLinks } from '@/services/api/navLinks';
 const NavBar: React.FC = () => {
+  const [navLinks, setNavLinks] = useState<INavLink[]>([]);
+
     const [showLinks, setShowLinks] = useState(false);
 
     const [dropdownOpenIndex, setDropdownOpenIndex] = useState<number | null>(null);
-    const navLinks = getNavLinks();
     const toggleLinks = () => {
         setShowLinks(!showLinks);
       };
