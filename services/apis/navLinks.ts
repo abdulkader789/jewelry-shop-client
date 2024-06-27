@@ -1,32 +1,24 @@
 // navLinks.ts
-import { INavLink } from '@/types';
+import { INavLink } from "@/types";
 
 export async function getNavLinks(): Promise<INavLink[]> {
   return [
-    { name: "Home", slug: "/" },
-    { name: "Shop", slug: "/shop" },
+    { name: "home", slug: "/" },
+    { name: "shop", slug: "/shop" },
     {
-      name: "Collections",
+      name: "collections",
       slug: "#",
       dropdown: [
-        { name: "Wedding Collection", slug: "/collections/wedding" },
-        { name: "Summer Collection", slug: "/collections/summer" },
-        { name: "Exclusive Collection", slug: "/collections/exclusive" },
+        { name: "wedding collection", slug: "/collections/wedding" },
+        { name: "summer collection", slug: "/collections/summer" },
+        { name: "exclusive collection", slug: "/collections/exclusive" },
       ],
     },
-    { name: "New Arrivals", slug: "/new-arrivals" },
-    { name: "Best Sellers", slug: "/best-sellers" },
-    { name: "About Us", slug: "/about" },
-    { name: "Contact", slug: "/contact" },
-    { name: "Cart", slug: "/cart" },
-    {
-      name: "My Account",
-      slug: "#",
-      dropdown: [
-        { name: "Profile", slug: "/account/profile" },
-        { name: "Orders", slug: "/account/orders" },
-        { name: "Settings", slug: "/account/settings" },
-      ],
-    },
+    { name: "new arrivals", slug: "/new-arrivals" },
+    { name: "best sellers", slug: "/best-sellers" },
+    { name: "earrings", slug: "/earrings" },
+    { name: "rings", slug: "/rings" },
+    { name: "necklaces", slug: "/necklaces" },
+    { name: "bracelets", slug: "/bracelets" },
   ];
 }
