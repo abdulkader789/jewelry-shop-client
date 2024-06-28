@@ -1,11 +1,18 @@
-import { ProductCard } from "@/components/common";
-import { Categories } from "@/components/home";
+"use client";
+import { useState } from "react";
 
-export default function HomePage() {
+export default function Home() {
+  const [count, setCount] = useState(0);
+
+  const handleCount = () => {
+    setCount(count + 1); // Increment count by 1
+  };
+
   return (
     <main className="">
-      <Categories />
-      <ProductCard />
+      <h1>Hello</h1>
+      <button onClick={handleCount}>Increment Count</button>
+      <p>Value of count: {count}</p>
     </main>
   );
 }
