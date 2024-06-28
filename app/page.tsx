@@ -1,5 +1,5 @@
 import { ProductCard } from "@/components/common";
-import { Categories, Subscribe } from "@/components/home";
+import { AboutStore, Categories, Subscribe } from "@/components/home";
 
 export default function HomePage() {
   return (
@@ -7,6 +7,7 @@ export default function HomePage() {
       <Categories />
       <ProductCard />
       <Subscribe />
+      <AboutStore />
     </main>
   );
 }
