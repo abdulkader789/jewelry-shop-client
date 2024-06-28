@@ -7,7 +7,7 @@ export async function getNavLinks(): Promise<INavLink[]> {
     { name: "best sellers", slug: "/best-sellers" },
     {
       name: "earrings",
-      slug: "#",
+      slug: "/earrings",
       dropdown: [
         { name: "stud earrings", slug: "/earrings/studs" },
         { name: "hoop earrings", slug: "/earrings/hoops" },
@@ -16,7 +16,7 @@ export async function getNavLinks(): Promise<INavLink[]> {
     },
     {
       name: "rings",
-      slug: "#",
+      slug: "/rings",
       dropdown: [
         { name: "engagement rings", slug: "/rings/engagement" },
         { name: "wedding rings", slug: "/rings/wedding" },
@@ -25,7 +25,7 @@ export async function getNavLinks(): Promise<INavLink[]> {
     },
     {
       name: "necklaces",
-      slug: "#",
+      slug: "/necklaces",
       dropdown: [
         { name: "pendant necklaces", slug: "/necklaces/pendants" },
         { name: "chain necklaces", slug: "/necklaces/chains" },
@@ -34,7 +34,7 @@ export async function getNavLinks(): Promise<INavLink[]> {
     },
     {
       name: "bracelets",
-      slug: "#",
+      slug: "/bracelets",
       dropdown: [
         { name: "bangles", slug: "/bracelets/bangles" },
         { name: "cuffs", slug: "/bracelets/cuffs" },

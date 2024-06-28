@@ -2,64 +2,45 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react"; // Import useState hook from React
+import React, { useEffect, useState } from "react"; // Import useState hook from React
 import NavLinks from "./NavLinks";
 
 const NavBar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State to manage menu open/close
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Function to toggle menu state
+  const toggleMenu = (): void => {
+    console.log("SVG clicked. Toggling menu...");
+    setIsMenuOpen((prev) => !prev); // Function to toggle menu state
   };
 
+  useEffect(() => {
+    console.log("Menu state updated: ", isMenuOpen);
+  }, [isMenuOpen]);
   return (
     <nav className="border h-12 w-full">
       <div className="flex w-full flex-col lg:flex-row lg:h-full">
-        <div className="text-lg w-40 h-full font-bold flex justify-between items-center">
+        <div className="text-lg h-full font-bold flex justify-between items-center">
           <Link
             href="/"
-            className="font-marcellus-regular w-full flex justify-center"
+            className="font-marcellus-regular w-40 flex justify-center"
           >
             Jewelry Shop
           </Link>
           {/* Show/hide icon based on isMenuOpen state */}
-          <span className="ml-2 cursor-pointer lg:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            )}
-          </span>
+          <div
+            className="ml-2 cursor-pointer lg:hidden border bg-blue-600"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <span>cross</span> : <span>bar</span>}
+          </div>
         </div>
-        <section className="w-full h-full">
+        {/* <section
+          className={`transform transition-transform duration-300 ease-in-out absolute top-0 z-20 w-full lg:w-auto lg:relative lg:transform-none ${
+            isMenuOpen ? "translate-x-0" : "-translate-x-1/2"
+          } bg-blue-500 lg:bg-transparent`}
+        >
           <NavLinks />
-        </section>
+        </section> */}
       </div>
     </nav>
   );
