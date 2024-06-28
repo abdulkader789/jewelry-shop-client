@@ -3,21 +3,43 @@ import { INavLink } from "@/types";
 
 export async function getNavLinks(): Promise<INavLink[]> {
   return [
-    { name: "Home", slug: "/" },
-    { name: "Shop", slug: "/shop" },
+    { name: "new arrivals", slug: "/new-arrivals" },
+    { name: "best sellers", slug: "/best-sellers" },
     {
-      name: "Collections",
+      name: "earrings",
       slug: "#",
       dropdown: [
-        { name: "Wedding Collection", slug: "/collections/wedding" },
-        { name: "Summer Collection", slug: "/collections/summer" },
-        { name: "Exclusive Collection", slug: "/collections/exclusive" },
+        { name: "stud earrings", slug: "/earrings/studs" },
+        { name: "hoop earrings", slug: "/earrings/hoops" },
+        { name: "dangle earrings", slug: "/earrings/dangles" },
       ],
     },
-    { name: "New Arrivals", slug: "/new-arrivals" },
-    { name: "Best Sellers", slug: "/best-sellers" },
-    { name: "About Us", slug: "/about" },
-    { name: "Contact", slug: "/contact" },
-    { name: "Cart", slug: "/cart" },
+    {
+      name: "rings",
+      slug: "#",
+      dropdown: [
+        { name: "engagement rings", slug: "/rings/engagement" },
+        { name: "wedding rings", slug: "/rings/wedding" },
+        { name: "fashion rings", slug: "/rings/fashion" },
+      ],
+    },
+    {
+      name: "necklaces",
+      slug: "#",
+      dropdown: [
+        { name: "pendant necklaces", slug: "/necklaces/pendants" },
+        { name: "chain necklaces", slug: "/necklaces/chains" },
+        { name: "choker necklaces", slug: "/necklaces/chokers" },
+      ],
+    },
+    {
+      name: "bracelets",
+      slug: "#",
+      dropdown: [
+        { name: "bangles", slug: "/bracelets/bangles" },
+        { name: "cuffs", slug: "/bracelets/cuffs" },
+        { name: "charm bracelets", slug: "/bracelets/charms" },
+      ],
+    },
   ];
 }

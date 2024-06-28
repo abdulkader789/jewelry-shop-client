@@ -13,10 +13,15 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className="border h-12">
-      <div className="flex flex-col lg:flex-row lg:h-full">
-        <div className="text-lg font-bold flex justify-between items-center">
-          <Link href="/">Jewelry Shop</Link>
+    <nav className="border h-12 w-full">
+      <div className="flex w-full flex-col lg:flex-row lg:h-full">
+        <div className="text-lg w-40 h-full font-bold flex justify-between items-center">
+          <Link
+            href="/"
+            className="font-marcellus-regular w-full flex justify-center"
+          >
+            Jewelry Shop
+          </Link>
           {/* Show/hide icon based on isMenuOpen state */}
           <span className="ml-2 cursor-pointer lg:hidden" onClick={toggleMenu}>
             {isMenuOpen ? (
@@ -52,7 +57,9 @@ const NavBar: React.FC = () => {
             )}
           </span>
         </div>
-        <NavLinks />
+        <section className="w-full h-full">
+          <NavLinks />
+        </section>
       </div>
     </nav>
   );
