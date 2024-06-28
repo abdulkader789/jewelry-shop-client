@@ -2,8 +2,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { INavLink } from "@/types";
-import apis from "@/services/apis";
+
+import apis from "./../../../services/apis/index";
+import { INavLink } from "../../../types";
 
 const NavLinks: React.FC = () => {
   const [navLinks, setNavLinks] = useState<INavLink[]>([]);
@@ -13,28 +14,11 @@ const NavLinks: React.FC = () => {
     apis.navLinks.getNavLinks().then((data: INavLink[]) => setNavLinks(data));
   }, []);
 
-  const handleMouseEnter = (index: number) => {
-    const updatedLinks = [...navLinks];
-    updatedLinks[index].showDropdown = true;
-    setNavLinks(updatedLinks);
-  };
-
-  const handleMouseLeave = (index: number) => {
-    const updatedLinks = [...navLinks];
-    updatedLinks[index].showDropdown = false;
-    setNavLinks(updatedLinks);
-  };
-
   return (
     <div className="flex w-full h-full">
       <ul className="flex flex-col h-full lg:flex-row w-full  lg:h-full items-center  lg:relative   left-0 lg:left-auto  transition-all duration-300 ease-in-out">
         {navLinks.map((link: INavLink, index: number) => (
-          <li
-            key={link.slug}
-            className="  px-5 h-full flex items-center group"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={() => handleMouseLeave(index)}
-          >
+          <li key={link.slug} className="  px-5 h-full flex items-center group">
             <Link href={link.slug} className="flex">
               <span className="uppercase font-marcellus-regular">
                 {link.name}
@@ -57,8 +41,8 @@ const NavLinks: React.FC = () => {
               )}
             </Link>
 
-            {link.dropdown && link.showDropdown && (
-              <ul className="lg:absolute bg-white lg:z-20 lg:flex-col lg:top-11 lg:ml-2 border transition-all duration-300 ease-in-out transform">
+            {link.dropdown && (
+              <ul className="lg:absolute bg-white lg:flex-col lg:top-11 lg:ml-2 border transition-all duration-300 ease-in-out transform">
                 {link.dropdown.map((sublink: INavLink) => (
                   <li
                     key={sublink.slug}

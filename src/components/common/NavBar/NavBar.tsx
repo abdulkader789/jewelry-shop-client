@@ -4,18 +4,9 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react"; // Import useState hook from React
 import NavLinks from "./NavLinks";
+import MenuBar from "./MenuBar";
 
 const NavBar: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State to manage menu open/close
-
-  const toggleMenu = (): void => {
-    console.log("SVG clicked. Toggling menu...");
-    setIsMenuOpen((prev) => !prev); // Function to toggle menu state
-  };
-
-  useEffect(() => {
-    console.log("Menu state updated: ", isMenuOpen);
-  }, [isMenuOpen]);
   return (
     <nav className="border h-12 w-full">
       <div className="flex w-full flex-col lg:flex-row lg:h-full">
@@ -27,12 +18,7 @@ const NavBar: React.FC = () => {
             Jewelry Shop
           </Link>
           {/* Show/hide icon based on isMenuOpen state */}
-          <div
-            className="ml-2 cursor-pointer lg:hidden border bg-blue-600"
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? <span>cross</span> : <span>bar</span>}
-          </div>
+          <MenuBar />
         </div>
         {/* <section
           className={`transform transition-transform duration-300 ease-in-out absolute top-0 z-20 w-full lg:w-auto lg:relative lg:transform-none ${

@@ -13,16 +13,16 @@ export const metadata: Metadata = {
     { name: "Abdul Kader", url: "https://github.com/abdulkader789" },
     { name: "Md Mahi Kaishar", url: "mahikaishar@gmail.com" },
     { name: "Toufiq Gilani Rabbu", url: "https://github.com/GilaniRabbu" },
-  ]
+  ],
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={"inter.className"}>
-        <MainLayout>
-          {children}
-        </MainLayout>
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
