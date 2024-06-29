@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {};
-=======
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["images.pond5.com", "www.google.com"],
-  },
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "**",
+    },
+  ],
 };
->>>>>>> dev-mdmahikaishar
 
 export default nextConfig;

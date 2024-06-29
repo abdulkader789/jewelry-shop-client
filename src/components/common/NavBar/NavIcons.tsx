@@ -1,7 +1,7 @@
 import React from "react";
 
-const Icons = () => {
+const NavIcons = () => {
   return <div></div>;
 };
 
-export default Icons;
+export default NavIcons;
