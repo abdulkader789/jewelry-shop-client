@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
-import { MainLayout } from "@/components/layouts";
 import "@/styles/tailwind.css";
 import "@/styles/app.css";
 import { Footer, NavBar } from "@/components/common";
