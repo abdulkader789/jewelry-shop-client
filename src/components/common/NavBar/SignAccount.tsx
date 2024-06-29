@@ -6,7 +6,7 @@ const SignAccount: React.FC = () => {
   return (
     <div className="flex justify-center items-center">
       <FaUser />
-      <span>Sign In / Create Account</span>
+      <span className="ml-2 text-[13px]">Sign In / Create Account</span>
     </div>
   );
 };

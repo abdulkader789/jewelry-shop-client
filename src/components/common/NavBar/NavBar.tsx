@@ -51,7 +51,7 @@ const NavBar = async () => {
         <div className="w-full">
           <NavLinks />
         </div>
-        <div className="px-3 w-96 uppercase text-sm font-marcellus-regular flex justify-end">
+        <div className="px-3 w-96 uppercase text-sm font-dm-sans-regular  flex justify-end">
           <SignAccount />
         </div>
       </nav>

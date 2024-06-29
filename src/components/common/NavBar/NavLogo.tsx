@@ -1,15 +1,22 @@
 // components/NavLogo.tsx
 import React from "react";
 import Link from "next/link";
-
+import shopLogo from "../../../../public/shop-logo.png";
+import Image from "next/image";
 const NavLogo: React.FC = () => {
   return (
-    <div className="text-lg w-40 h-full font-bold flex justify-between items-center">
+    <div className="text-lg w-40 h-6 font-bold flex justify-between items-center">
       <Link
         href="/"
         className="flex justify-center font-marcellus-regular text-md"
       >
-        Jewelry Shop
+        <Image
+          src="/jewelry-logo.png"
+          width={300}
+          height={300}
+          alt="Picture of the author"
+          className="h-full"
+        />
       </Link>
       {/* Show/hide icon based on isMenuOpen state */}
       <span className="ml-2 cursor-pointer lg:hidden">

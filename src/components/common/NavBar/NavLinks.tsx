@@ -14,7 +14,7 @@ const NavLinks = async () => {
       {navLinks.map((link) => (
         <li
           key={link.slug}
-          className="group text-sm uppercase font-marcellus-regular "
+          className="group text-sm uppercase font-dm-sans-medium text-[13px] w-full overflow-hidden"
         >
           <Link href={link.slug} className="flex py-2 px-4">
             {link.name}
@@ -38,14 +38,14 @@ const NavLinks = async () => {
 
           {link.dropdown && (
             <ul
-              className={`pl-5 lg:pl-0 flex-col max-h-0 z-30 overflow-hidden bg-gray-200 w-auto  transition-[max-height] duration-300 ease-in-out group-hover:max-h-[1000px] lg:absolute lg:top-11`}
+              className={`pl-5 lg:pl-0  flex-col max-h-0 z-30 overflow-hidden bg-gray-100  shadow-md  transition-[max-height] duration-100 ease-in-out group-hover:max-h-[1000px] lg:absolute lg:top-11`}
             >
               {link.dropdown.map((sublink: INavLink) => (
-                <li key={sublink.slug} className=" hover:bg-gray-200 ">
-                  <Link
-                    href={sublink.slug}
-                    className="block uppercase font-marcellus-regular text-sm py-2 px-4"
-                  >
+                <li
+                  key={sublink.slug}
+                  className=" hover:text-orange-400 w-full"
+                >
+                  <Link href={sublink.slug} className="block  py-2 px-5 w-full">
                     {sublink.name}
                   </Link>
                 </li>
