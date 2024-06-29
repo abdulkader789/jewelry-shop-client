@@ -17,10 +17,27 @@
         "name": "next"
       }
     ],
+    "baseUrl": "./",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
+=======
+      "@/*": ["./*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "/**/**.ts",
+    "/**/**.tsx",
+    ".next/types/**/**.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+>>>>>>> dev-mdmahikaishar
 }
