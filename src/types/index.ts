@@ -1,8 +1,15 @@
 export interface IProduct {
     id: string,
     name: string,
-    img: string,
     des: string,
+    img: string,
+}
+
+export interface ICategory {
+    id: string,
+    name: string,
+    des: string,
+    img: string,
 }
 
 export interface IUser {
