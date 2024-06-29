@@ -11,7 +11,7 @@ const NavIcons: React.FC<NavIconsProps> = ({ icons }) => {
       {icons.map((item, index) => (
         <li key={index} className="flex pr-4 py-2 ">
           <item.icon className="text-orange-300" />
-          <span className="font-dm-sans-medium text-slate-800 text-[11px] ml-2 uppercase">
+          <span className="font-navlink text-slate-800 text-[11px]  uppercase pl-2">
             {item.title}
           </span>
         </li>

@@ -24,7 +24,7 @@ import NavLogo from "./NavLogo";
 
 const NavBar = async () => {
   return (
-    <main className="border hidden lg:block px-5 py-3 sticky top-0 bg-white">
+    <main className="border hidden lg:flex lg:flex-col px-5 py-3 sticky top-0 bg-white">
       <header className="hideen lg:flex justify-between w-full mb-2">
         <NavIcons
           icons={[
@@ -46,12 +46,14 @@ const NavBar = async () => {
         />
       </header>
       <nav className="w-full flex justify-between">
-        <NavLogo />
+        <div>
+          <NavLogo />
+        </div>
 
         <div className="w-full">
           <NavLinks />
         </div>
-        <div className="px-3 w-96 uppercase text-sm font-dm-sans-regular  flex justify-end">
+        <div className="w-[300px]   flex justify-end">
           <SignAccount />
         </div>
       </nav>
