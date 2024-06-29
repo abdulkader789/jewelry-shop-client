@@ -1,33 +1,39 @@
-/* fonts.css */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&display=swap");
-/* Marcellus Font */
-.font-marcellus-regular {
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Marcellus&display=swap");
+
+/* Font Styles for Specific Use Cases */
+
+/* Navigation Links */
+.font-navlink {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700; /* Medium weight for better visibility */
+  font-style: normal;
+}
+
+/* Buttons */
+.font-button {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500; /* Bold for emphasis */
+  font-style: normal;
+}
+
+/* Headings */
+.font-heading {
   font-family: "Marcellus", serif;
-  /* Add any additional styles specific to Marcellus */
+  font-weight: 400; /* Regular weight for elegance */
+  font-style: normal;
 }
 
-/* DM Sans Font */
-.font-dm-sans {
+/* Paragraphs */
+.font-paragraph {
   font-family: "DM Sans", sans-serif;
-  /* Add any additional styles specific to DM Sans */
+  font-weight: 400; /* Regular weight for readability */
+  font-style: normal;
 }
 
-/* Additional Font Weights and Styles */
-/* For DM Sans: */
-.font-dm-sans-italic {
+/* Italic for specific text use cases */
+.font-paragraph-italic {
   font-family: "DM Sans", sans-serif;
+  font-weight: 400; /* Regular weight */
   font-style: italic;
-}
-
-/* Adjust font weights for DM Sans as needed */
-.font-dm-sans-regular {
-  font-weight: 400;
-}
-
-.font-dm-sans-medium {
-  font-weight: 500;
-}
-
-.font-dm-sans-bold {
-  font-weight: 700;
 }
