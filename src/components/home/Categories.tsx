@@ -1,16 +1,7 @@
-"use client";
-import { useEffect, useState } from "react";
 import { ICategory } from "@/types";
 import { CategoryCard } from "../common";
-import apis from "@/services/apis";
 
-export default function Categories() {
-  const [categories, setCategories] = useState<ICategory[]>([]);
-
-  useEffect(() => {
-    apis.categories.getCategories().then((data) => setCategories(data));
-  }, []);
-
+export default function Categories({ categories } : { categories: ICategory[] }) {
   return (
     <section className="container mx-auto p-4 md:py-12">
       <div className="mb-8 md:mb-12">
