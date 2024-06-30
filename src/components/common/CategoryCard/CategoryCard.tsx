@@ -6,7 +6,7 @@ import { ICategory } from "@/types";
 
 export default function CategoryCard({ category }: { category: ICategory }) {
   return (
-    <div className="cursor-pointer group transition-all hover:shadow-md bg-gray-100 hover:bg-gray-50">
+    <div className="max-w-[17.5rem] cursor-pointer group transition-all hover:shadow-md border bg-gray-100 hover:bg-gray-50">
       {/* Image */}
       <div className="w-full aspect-square">
         <Image

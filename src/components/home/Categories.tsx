@@ -12,12 +12,12 @@ export default function Categories() {
   }, []);
 
   return (
-    <section className="">
-      <div className="mb-8">
+    <section className="container mx-auto p-4 md:py-12">
+      <div className="mb-8 md:mb-12">
         {/* <h4 className="text-xs md:text-sm text-center uppercase">We've got you covered</h4> */}
         <h1 className="text-2xl md:text-4xl text-center">Explore the Range</h1>
       </div>
-      <div className="container mx-auto px-4 grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+      <div className="container mx-auto px-4 flex flex-wrap items-center justify-center gap-4 md:gap-8">
         {categories.map((item, index: number) => (
           <CategoryCard category={item} key={index} />
         ))}

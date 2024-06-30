@@ -15,7 +15,7 @@ export async function getCategories(): Promise<ICategory[]> {
             des: "Product one des",
         },
         {
-            id: "001",
+            id: "003",
             name: "Wedding",
             img: "/assets/wedding.png",
             des: "Product one des",
